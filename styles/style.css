@@ -1,14 +1,24 @@
-/*************/
-/* CSS RESET */
-/*************/
-
-/* naar een idee van Jen Simmons */
-*, *::after, *::before {
-  box-sizing:border-box;  
+/********************/
+/***** FONT FACE ****/
+/********************/
+@font-face {
+  font-family: 'aachen';
+  src: url('../fonts/aachen_std_medium-webfont.woff') format('woff2'),
+       url('../fonts/aachen_std_medium-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-body {
-  margin:0;
+
+
+
+/********************/
+/******* RESET ******/
+/********************/
+*, *::after, *::before {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0; 
 }
 
 button:not([disabled]) {
@@ -18,15 +28,17 @@ button:not([disabled]) {
 
 
 
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-
 :root {
-  --color-headings:crimson
+  --color-yellow: #ffd200;
+  --color-white: #ffffff;
+  --color-grey:rgb(233, 233, 233);
+  --color-shadow-grey: rgb(224, 224, 224);
+  --color-orange: rgb(255, 166, 0);
+  --color-brown: rgb(90, 58, 28);
 }
-
 
 
 
@@ -34,12 +46,152 @@ button:not([disabled]) {
 /********************/
 /* ALGEMENE STYLING */
 /********************/
-
-h1 {
-  color:var(--color-headings);
+body {
+  background-color: var(--color-yellow);
 }
 
 
-/* ... */
 
 
+/********************/
+/****** HEADER ******/
+/********************/
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  padding: 2.5em 0em 0em 0em;
+  width: 15%;
+  height: 15%;
+}
+
+
+
+
+/********************/
+/***** BUISJES ******/
+/********************/
+main ol {
+  --year-label-height: 3rem;
+  position: relative;
+  height: 30rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  max-width: 1400px;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 0 auto;
+}
+
+main ol li {
+  flex-grow: 1;
+}
+
+main ol li p {
+  color: var(--color-white);
+  background-color: var(--color-brown);
+  padding: 1em;
+  height: var(--year-label-height);
+  text-align: center;
+  /* -webkit-text-stroke: .5px var(--color-white); */
+  font-weight: bold;
+  font-family: aachen, arial;
+  box-shadow: .1em .1em .5em var(--color-shadow-grey);
+}
+
+main ol li button {
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  position: relative;
+  height: calc(100% - var(--year-label-height));
+  width: 100%;
+  background-color: var(--color-grey);
+  border-color: transparent;
+  border-radius: 0em 0em 6em 6em;
+  border: solid 2px var(--color-white);
+  box-shadow: inset .1em .1em .5em var(--color-white);
+}
+
+/********************/
+/****** SCHADUW *****/
+/********************/
+
+main ol li button::after {
+  content: '';
+  position: absolute;
+  bottom: -3em;
+  width: 80%;
+  height: 1.6em;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/********************/
+/****IMAGE M&MS *****/
+/********************/
+main ol li:first-of-type button {
+  background-image: url(../images/MMs-buis-rood.svg);
+}
+
+main ol li:nth-of-type(2) button {
+  background-image: url(../images/MMs-buis-geel.svg);
+}
+
+main ol li:nth-of-type(3) button {
+  background-image: url(../images/MMs-buis-oranje.svg);
+}
+
+main ol li:nth-of-type(4) button {
+  background-image: url(../images/MMs-buis-blauw.svg);
+}
+
+main ol li:nth-of-type(5) button {
+  background-image: url(../images/MMs-buis-groen.svg);
+}
+
+main ol li:nth-of-type(6) button {
+  background-image: url(../images/MMs-buis-bruin.svg);
+}
+
+main ol li:nth-of-type(7) button {
+  background-image: url(../images/MMs-buis-paars.svg);
+}
+
+
+
+
+/********************/
+/******* BAKJE ******/
+/********************/
+
+main ol li:last-of-type {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all .2s ease-in-out;
+
+}
+
+main ol li:nth-of-type(2):hover ~ li:last-of-type {
+  left: 20%;
+}
+
+
+/********************/
+/******* GLANS ******/
+/********************/
+@keyframes gradient-animation {
+  0% {
+    background-position:right bottom;
+  }
+  100% {
+    background-position:left top;
+  }
+}
