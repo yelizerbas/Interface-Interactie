@@ -38,8 +38,9 @@ button:not([disabled]) {
   --color-shadow-grey: rgb(224, 224, 224);
   --color-orange: rgb(255, 166, 0);
   --color-brown: rgb(90, 58, 28);
+  --color-shine: rgba(191, 203, 255, 0.8);
+  --color-transparent: transparent;
 }
-
 
 
 
@@ -56,7 +57,6 @@ body {
 /********************/
 /****** HEADER ******/
 /********************/
-
 header {
   display: flex;
   justify-content: center;
@@ -120,7 +120,6 @@ main ol li button {
 /********************/
 /****** SCHADUW *****/
 /********************/
-
 main ol li button::after {
   content: '';
   position: absolute;
@@ -138,6 +137,7 @@ main ol li button::after {
 /********************/
 main ol li:first-of-type button {
   background-image: url(../images/MMs-buis-rood.svg);
+  cursor: url() 4 12 auto;
 }
 
 main ol li:nth-of-type(2) button {
@@ -170,7 +170,6 @@ main ol li:nth-of-type(7) button {
 /********************/
 /******* BAKJE ******/
 /********************/
-
 main ol li:last-of-type {
   position: absolute;
   bottom: 0;
@@ -187,11 +186,59 @@ main ol li:nth-of-type(2):hover ~ li:last-of-type {
 /********************/
 /******* GLANS ******/
 /********************/
-@keyframes gradient-animation {
-  0% {
-    background-position:right bottom;
-  }
-  100% {
-    background-position:left top;
-  }
+
+/* https://stackoverflow.com/questions/66812538/using-css-animation-to-make-a-div-element-move-to-each-corner-of-the-page
+https://www.youtube.com/watch?v=2MqPh4mPm78 */
+
+/* main ol li button::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-45deg, var(--color-transparent), var(--color-shine));
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  filter: blur(2px);
+  border-radius: 0em 0em 6em 6em;
 }
+
+main ol li button:hover:before{
+  animation: gradient 3s ease infinite;
+  animation-name: glans; 
+  background: red;
+}
+
+@keyframes glans {
+	0%, 100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+} */
+
+/* @keyframes glans{
+0% {
+  transform: translate(0) translateY(0);
+}
+50% {
+  top: 100%;
+  left: 100%;
+  transform: translateX(-100%) translateY(-100%);
+}
+100% {
+  top: -5%;
+  left: -5%;
+  transform: translateX(0) translateY(0);
+}
+} */
+
+/* {
+  0%, 100%{
+    transform: translateX(0deg);
+  }
+  50%{
+    transform: translateX();
+  }
+} */
