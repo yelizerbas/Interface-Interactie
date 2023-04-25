@@ -101,20 +101,21 @@ header img {
 /********************/
 main ol {
   --year-label-height: 3rem;
+  --buisjes: 7;
   position: relative;
   height: 30rem;
   list-style: none;
   display: flex;
   flex-direction: row;
-  width: 95%;
+  width: 100%;
   max-width: 1400px;
   justify-content: space-between;
-  gap: 2em;
   margin: 0 auto;
 }
 
 main ol li {
   flex-grow: 1;
+  padding: 0 1em;
 }
 
 main ol li p {
@@ -140,6 +141,7 @@ main ol li button {
   border-radius: 0em 0em 6em 6em;
   border: solid 2px var(--color-white);
   box-shadow: inset .1em .1em .5em var(--color-white);
+  overflow: hidden;
 }
 
 
@@ -152,7 +154,7 @@ main ol li button {
 /********************/
 /****** SCHADUW *****/
 /********************/
-main ol li button::after {
+/* main ol li button::after {
   content: '';
   position: absolute;
   bottom: -3em;
@@ -162,13 +164,44 @@ main ol li button::after {
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
+} */
+
+
+
+
+
+
+
+/********************/
+/*** HOVER CURSOR ***/
+/********************/
+main ol li:first-of-type{
+  cursor: url(../images/MMs-cursor-rood.png), pointer;
 }
 
+main ol li:nth-of-type(2){
+  cursor: url(../images/MMs-cursor-geel.png), pointer;
+}
 
+main ol li:nth-of-type(3){
+  cursor: url(../images/MMs-cursor-oranje.png), pointer;
+}
 
+main ol li:nth-of-type(4){
+  cursor: url(../images/MMs-cursor-blauw.png), pointer;
+}
 
+main ol li:nth-of-type(5){
+  cursor: url(../images/MMs-cursor-groen.png), pointer;
+}
 
+main ol li:nth-of-type(6){
+  cursor: url(../images/MMs-cursor-bruin.png), pointer;
+}
 
+main ol li:nth-of-type(7){
+  cursor: url(../images/MMs-cursor-paars.png), pointer;
+}
 
 
 
@@ -177,30 +210,37 @@ main ol li button::after {
 /****IMAGE M&MS *****/
 /********************/
 main ol li:first-of-type button {
+  cursor: inherit;
   background-image: url(../images/MMs-buis-rood.svg);
 }
 
 main ol li:nth-of-type(2) button {
+  cursor: inherit;
   background-image: url(../images/MMs-buis-geel.svg);
 }
 
 main ol li:nth-of-type(3) button {
+  cursor: inherit;
   background-image: url(../images/MMs-buis-oranje.svg);
 }
 
 main ol li:nth-of-type(4) button {
+  cursor: inherit;
   background-image: url(../images/MMs-buis-blauw.svg);
 }
 
 main ol li:nth-of-type(5) button {
+  cursor: inherit;
   background-image: url(../images/MMs-buis-groen.svg);
 }
 
 main ol li:nth-of-type(6) button {
+  cursor: inherit;
   background-image: url(../images/MMs-buis-bruin.svg);
 }
 
 main ol li:nth-of-type(7) button {
+  cursor: inherit;
   background-image: url(../images/MMs-buis-paars.svg);
 }
 
@@ -211,93 +251,120 @@ main ol li:nth-of-type(7) button {
 
 
 /********************/
-/******* BAKJE ******/
+/******* ZAKJE ******/
 /********************/
 main ol li:last-of-type {
   position: absolute;
-  bottom: -15em;
-  left: 45%;
+  bottom: -15rem;
+  left: calc(100% / var(--buisjes) * 3);
+  width: calc(100% / var(--buisjes));
   transition: all .2s ease-in-out;
 
 }
 
 main ol li:last-of-type img{
-  width: 50%;
+  width: 100%;
+  height:100%;
 }
 
-main ol li:nth-of-type(1):hover ~ li:last-of-type {
-  left: 0%;
+
+/*** verplaatsen en kleur aanpassen ***/
+
+main ol li:nth-of-type(1).selected ~ li:last-of-type,
+main ol:not(.locked) li:nth-of-type(1):hover ~ li:last-of-type {
+  left: 0;
+  filter: hue-rotate(150deg) brightness(.8) saturate(2);
 }
 
-main ol li:nth-of-type(2):hover ~ li:last-of-type {
+main ol li:nth-of-type(2).selected ~ li:last-of-type,
+main ol:not(.locked) li:nth-of-type(2):hover ~ li:last-of-type {
   /* left: calc(0% + var(--slide-precentage)); */
-  left: 15%;
+  left: calc(100% / var(--buisjes));
+  filter: hue-rotate(-150deg) saturate(3) brightness(1.3);
 }
 
-main ol li:nth-of-type(3):hover ~ li:last-of-type {
-  left: 30%;
+main ol li:nth-of-type(3).selected ~ li:last-of-type,
+main ol:not(.locked) li:nth-of-type(3):hover ~ li:last-of-type {
+  left: calc(100% / var(--buisjes) * 2);
+  filter: hue-rotate(-170deg) saturate(1.3) brightness(1.3);
 }
 
-/* main ol li:nth-of-type(4):hover ~ li:last-of-type {
-  left: 45%;
+/* main ol li:nth-of-type(4).selected ~ li:last-of-type,
+main ol li:nth-of-type(4):hover ~ li:last-of-type {
 } */
 
-main ol li:nth-of-type(5):hover ~ li:last-of-type {
-  left: 59%;
+main ol li:nth-of-type(5).selected ~ li:last-of-type,
+main ol:not(.locked) li:nth-of-type(5):hover ~ li:last-of-type {
+  left: calc(100% / var(--buisjes) * 4);
+  filter: hue-rotate(-120deg) saturate(1.5) brightness(1.3);
 }
 
-main ol li:nth-of-type(6):hover ~ li:last-of-type {
-  left: 74%;
+main ol li:nth-of-type(6).selected ~ li:last-of-type,
+main ol:not(.locked) li:nth-of-type(6):hover ~ li:last-of-type {
+  left: calc(100% / var(--buisjes) * 5);
+  filter: hue-rotate(-170deg) saturate(.9) brightness(.9);
 }
 
-main ol li:nth-of-type(7):hover ~ li:last-of-type {
-  left: 89%;
+main ol li:nth-of-type(7).selected ~ li:last-of-type,
+main ol:not(.locked) li:nth-of-type(7):hover ~ li:last-of-type {
+  left: calc(100% / var(--buisjes) * 6);
+  filter: hue-rotate(70deg) brightness(.9) saturate(1.1);
 }
 
+/********************/
+/**** MMS VALLEN ****/
+/********************/
+/* main ol li img{
+  position: absolute;
+  width: 30%;
+} */
+
+/* main ol li div{
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 6em 6em;
+} */
 
 
 /********************/
 /******* GLANS ******/
 /********************/
-/* https://stackoverflow.com/questions/66812538/using-css-animation-to-make-a-div-element-move-to-each-corner-of-the-page
-https://www.youtube.com/watch?v=2MqPh4mPm78 */
+main ol li button:hover::before{
+  animation: glans 4s infinite linear;
+  content:"";
+  display:block;
+  width:100%;
+  height:100%;
+  background-image:conic-gradient(
+    at -300% 70%,
+    var(--color-transparent) 70deg,
+    var(--color-shine) 0,
+    var(--color-shine)  74deg,
+    var(--color-transparent) 0 
+  );
 
-main ol li button::before{
-  content:'';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(-30deg, 
-  var(--color-transparent) 0% 82%, 
-  var(--color-shine) 82% 86%,
-  var(--color-transparent) 86% 89%,
-  var(--color-shine) 89% 99%,
-  var(--color-transparent) 99% 100%);
-  background-size: 100% 100%;
-  height: 100%;
-  width: 100%;
-  border-radius: 0em 0em 6em 6em;
-}
-
-main ol li button:hover:before{
-  animation: glans 3s ease 1;
 }
 
 @keyframes glans {
-  from {
-    background-position-x: -200%;
+  0%, 15%{
+    transform: translatey(-100%);
+  }
+  15%, 100%{
+    transform: translatey(100%);
   }
 }
 
-/* @keyframes glans{
-0% {
-  transform: translate(0) translateY(0);
-}
-50% {
-  transform: translateX(0%) translateY(100%);
-}
-100% {
-  transform: translateX(0) translateY(0);
-}
-} */
 
+
+    /* background-image:conic-gradient(
+    at -300% 70%,
+    transparent 70deg,
+    var(--color-shine) 0,
+    var(--color-shine)  75deg,
+    transparent 0 79deg,
+    var(--color-shine)  0,
+    var(--color-shine) 83deg,
+    transparent 0
+  ); */
