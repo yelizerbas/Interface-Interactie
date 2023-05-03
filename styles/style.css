@@ -40,6 +40,7 @@ button:not([disabled]) {
 :root {
   --color-yellow: #ffd200;
   --color-white: #ffffff;
+  --color-white-text: #ffffff;
   --color-grey:rgba(233, 233, 233, 0.664);
   --color-shadow-grey: rgb(224, 224, 224);
   --color-orange: rgb(255, 166, 0);
@@ -52,8 +53,28 @@ button:not([disabled]) {
 
 
 
+/*********************/
+/***** DARK MODE *****/
+/*********************/
+@media (prefers-color-scheme: dark) {
+  body {
+    cursor: url(../images/MMs-cursor-wit.png), pointer;
+  }
+  
+  :root {
+    --color-yellow: #1f1f1f;
+    --color-white: #ffffff;
+    --color-white-text: #1f1f1f;
+    --color-grey:rgba(233, 233, 233, 0.664);
+    --color-shadow-grey: rgb(77, 77, 77);
+    --color-orange: rgb(255, 166, 0);
+    --color-brown: #ffd200;
+    --color-shine: rgba(255, 255, 255, 0.836);
+    --color-transparent: transparent;
+    
+  }  
 
-
+}
 
 
 /********************/
@@ -119,7 +140,7 @@ main ol li {
 }
 
 main ol li p {
-  color: var(--color-white);
+  color: var(--color-white-text);
   background-color: var(--color-brown);
   padding: 1em;
   height: var(--year-label-height);
@@ -314,17 +335,75 @@ main ol:not(.locked) li:nth-of-type(7):hover ~ li:last-of-type {
 /********************/
 /**** MMS VALLEN ****/
 /********************/
-/* main ol li img{
-  position: absolute;
-  width: 30%;
-} */
+/* positioneren afbeeldingen */
+main ol li:not(:last-of-type) img{
+  position: relative;
+  width: 35%;
+  top: -130%;
+  z-index: -2;
+  display: block;
+  margin: auto;
+}
 
-/* main ol li div{
-  position: absolute;
-  background-color: red;
-  width: 100%;
-  height: 100%;
+/* gele vlak er voor */
+main ol li div{
+  position: relative;
+  background-color: var(--color-yellow);
   border-radius: 0 0 6em 6em;
+  height: 100%;
+  top: -100%;
+  z-index: -1;
+}
+
+/* animatie vallende mms */
+@keyframes vallen {
+  0%{
+    transform: translatey(0%);
+  }
+  100%{
+    transform: translatey(130%);
+  }
+}
+
+main ol li:not(:last-of-type) img{
+  animation: vallen 2s ;
+}
+
+
+/* main ol li:not(:last-of-type):first-of-type img{
+  display: block;
+  margin: auto;
+
+}
+
+main ol li:not(:last-of-type):nth-of-type(2) img{
+  display: block;
+  margin: auto;
+}
+
+main ol li:not(:last-of-type):nth-of-type(3) img{
+  display: block;
+  margin: auto;
+}
+
+main ol li:not(:last-of-type):nth-of-type(4) img{
+  display: block;
+  margin: auto;
+}
+  
+main ol li:not(:last-of-type):nth-of-type(5) img{
+  display: block;
+  margin: auto;
+}
+  
+main ol li:not(:last-of-type):nth-of-type(6) img{
+  display: block;
+  margin: auto;
+}
+
+main ol li:not(:last-of-type):nth-of-type(7) img{
+  display: block;
+  margin: auto;
 } */
 
 
@@ -355,16 +434,3 @@ main ol li button:hover::before{
     transform: translatey(100%);
   }
 }
-
-
-
-    /* background-image:conic-gradient(
-    at -300% 70%,
-    transparent 70deg,
-    var(--color-shine) 0,
-    var(--color-shine)  75deg,
-    transparent 0 79deg,
-    var(--color-shine)  0,
-    var(--color-shine) 83deg,
-    transparent 0
-  ); */
