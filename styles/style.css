@@ -38,7 +38,8 @@ button:not([disabled]) {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-  --color-yellow: #ffd200;
+  /* --color-yellow: #ffd200; */
+  --color-yellow: #fff1b4;
   --color-white: #ffffff;
   --color-white-text: #ffffff;
   --color-grey:rgba(233, 233, 233, 0.664);
@@ -159,7 +160,7 @@ main ol li button {
   width: 100%;
   background-color: var(--color-grey);
   border-color: transparent;
-  border-radius: 0em 0em 6em 6em;
+  border-radius: 0 0 6em 6em;
   border: solid 2px var(--color-white);
   box-shadow: inset .1em .1em .5em var(--color-white);
   overflow: hidden;
@@ -289,7 +290,7 @@ main ol li:last-of-type img{
 }
 
 
-/*** verplaatsen en kleur aanpassen ***/
+/* verplaatsen en kleur aanpassen */
 
 main ol li:nth-of-type(1).selected ~ li:last-of-type,
 main ol:not(.locked) li:nth-of-type(1):hover ~ li:last-of-type {
@@ -332,6 +333,7 @@ main ol:not(.locked) li:nth-of-type(7):hover ~ li:last-of-type {
   filter: hue-rotate(70deg) brightness(.9) saturate(1.1);
 }
 
+
 /********************/
 /**** MMS VALLEN ****/
 /********************/
@@ -365,45 +367,37 @@ main ol li div{
   }
 }
 
-main ol li:not(:last-of-type) img{
-  animation: vallen 2s ;
+main ol li:not(:last-of-type) img.fall{
+  animation: vallen 2s;
 }
 
 
-/* main ol li:not(:last-of-type):first-of-type img{
-  display: block;
-  margin: auto;
-
+/* main ol li:not(:last-of-type):first-of-type.selected img.fall{
+  animation: vallen 2s;
 }
 
-main ol li:not(:last-of-type):nth-of-type(2) img{
-  display: block;
-  margin: auto;
+main ol li:not(:last-of-type):nth-of-type(2).selected img.fall{
+  animation: vallen 2s;
 }
 
-main ol li:not(:last-of-type):nth-of-type(3) img{
-  display: block;
-  margin: auto;
+main ol li:not(:last-of-type):nth-of-type(3) img.fall{
+  animation: vallen 2s;
 }
 
-main ol li:not(:last-of-type):nth-of-type(4) img{
-  display: block;
-  margin: auto;
+main ol li:not(:last-of-type):nth-of-type(4) img.fall{
+  animation: vallen 2s;
 }
   
-main ol li:not(:last-of-type):nth-of-type(5) img{
-  display: block;
-  margin: auto;
+main ol li:not(:last-of-type):nth-of-type(5) img.fall{
+  animation: vallen 2s;
 }
   
-main ol li:not(:last-of-type):nth-of-type(6) img{
-  display: block;
-  margin: auto;
+main ol li:not(:last-of-type):nth-of-type(6) img.fall{
+  animation: vallen 2s;
 }
 
-main ol li:not(:last-of-type):nth-of-type(7) img{
-  display: block;
-  margin: auto;
+main ol li:not(:last-of-type):nth-of-type(7) img.fall{
+  animation: vallen 2s;
 } */
 
 
