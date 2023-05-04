@@ -22,6 +22,7 @@
   box-sizing:border-box;
   margin: 0;
   padding: 0; 
+  outline-color: var(--color-blue);
 }
 
 button:not([disabled]) {
@@ -46,8 +47,12 @@ button:not([disabled]) {
   --color-shadow-grey: rgb(224, 224, 224);
   --color-orange: rgb(255, 166, 0);
   --color-brown: rgb(90, 58, 28);
+  --color-blue: #008fcd;
+  --color-pink: #f717ff;
+  --color-red: #f21919;
   --color-shine: rgba(255, 255, 255, 0.836);
   --color-transparent: transparent;
+  --cursor: url(../images/MMs-cursor-zwart.png), pointer;
 }
 
 
@@ -57,12 +62,32 @@ button:not([disabled]) {
 /*********************/
 /***** DARK MODE *****/
 /*********************/
-@media (prefers-color-scheme: dark) {
-  body {
-    cursor: url(../images/MMs-cursor-wit.png), pointer;
-  }
+
+:root.darkmode {
+  --color-yellow: #1f1f1f;
+  --color-white: #ffffff;
+  --color-white-text: #1f1f1f;
+  --color-grey:rgba(233, 233, 233, 0.664);
+  --color-shadow-grey: rgb(77, 77, 77);
+  --color-orange: rgb(255, 166, 0);
+  --color-brown: #ffd200;
+  --color-shine: rgba(255, 255, 255, 0.836);
+  --color-transparent: transparent;
+  --cursor: url(../images/MMs-cursor-wit.png), pointer;
   
-  :root {
+}  
+
+@media (prefers-color-scheme: dark) {
+  *, *::after, *::before {
+    outline-color: var(--color-pink);
+  }
+
+  /* body {
+    cursor: url(../images/MMs-cursor-wit.png), pointer;
+    cursor: var(--cursor);
+  } */
+  
+  /* :root {
     --color-yellow: #1f1f1f;
     --color-white: #ffffff;
     --color-white-text: #1f1f1f;
@@ -72,8 +97,9 @@ button:not([disabled]) {
     --color-brown: #ffd200;
     --color-shine: rgba(255, 255, 255, 0.836);
     --color-transparent: transparent;
+    --cursor: url(../images/MMs-cursor-wit.png), pointer;
     
-  }  
+  }   */
 
 }
 
@@ -83,7 +109,8 @@ button:not([disabled]) {
 /********************/
 body {
   background-color: var(--color-yellow);
-  cursor: url(../images/MMs-cursor-zwart.png), pointer;
+  /* cursor: url(../images/MMs-cursor-zwart.png), pointer; */
+  cursor: var(--cursor);
 }
 
 
@@ -152,7 +179,7 @@ main ol li p {
   box-shadow: .1em .1em .5em var(--color-shadow-grey);
 }
 
-main ol li button {
+main ol li button.buis{
   background-repeat: repeat-y;
   background-size: 100% auto;
   position: relative;
@@ -231,37 +258,37 @@ main ol li:nth-of-type(7){
 /********************/
 /****IMAGE M&MS *****/
 /********************/
-main ol li:first-of-type button {
+main ol li:first-of-type button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-rood.svg);
 }
 
-main ol li:nth-of-type(2) button {
+main ol li:nth-of-type(2) button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-geel.svg);
 }
 
-main ol li:nth-of-type(3) button {
+main ol li:nth-of-type(3) button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-oranje.svg);
 }
 
-main ol li:nth-of-type(4) button {
+main ol li:nth-of-type(4) button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-blauw.svg);
 }
 
-main ol li:nth-of-type(5) button {
+main ol li:nth-of-type(5) button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-groen.svg);
 }
 
-main ol li:nth-of-type(6) button {
+main ol li:nth-of-type(6) button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-bruin.svg);
 }
 
-main ol li:nth-of-type(7) button {
+main ol li:nth-of-type(7) button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-paars.svg);
 }
@@ -367,7 +394,7 @@ main ol li div{
   }
 }
 
-main ol li:not(:last-of-type) img.fall{
+main ol li.selected img.fall{
   animation: vallen 2s;
 }
 
@@ -404,7 +431,7 @@ main ol li:not(:last-of-type):nth-of-type(7) img.fall{
 /********************/
 /******* GLANS ******/
 /********************/
-main ol li button:hover::before{
+main ol li button.buis:hover::before{
   animation: glans 4s infinite linear;
   content:"";
   display:block;
@@ -427,4 +454,53 @@ main ol li button:hover::before{
   15%, 100%{
     transform: translatey(100%);
   }
+}
+
+/********************/
+/***** DIALOGS ******/
+/********************/
+
+main ol li dialog{
+  
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-transparent);
+  border: none;
+  transition-delay: 3s;
+  padding:0;
+  
+}
+dialog::backdrop {
+  backdrop-filter:blur(3em) brightness(1.2);
+}
+
+main ol li dialog button{
+  position:absolute;
+	right: 1em;
+	top: 2em;
+  z-index: 10;
+  width: 1.5em;
+  aspect-ratio: 1/1;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: 1em;
+  transition: 0.3s
+}
+
+main ol li dialog button:hover{
+  background-color: var(--color-red);
+  transition: 0.3s
+}
+
+main ol li dialog iframe{
+  position: absolute;
+	top: 3em;
+	left: 3em;
+	height: 95%;
+	width: 95%;
+	object-fit:cover;
+	object-position:center;
 }
