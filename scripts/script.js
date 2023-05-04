@@ -7,64 +7,11 @@ console.log('Howdy!');
 const tubesList = document.querySelector('main ol');
 const tubes = document.querySelectorAll('main ol li:not(:last-of-type) button.buis');
 const bag = document.querySelector('main ol li:last-of-type');
-
 let hasSelected = false;
-
-// function zakje op zelfde plek laten staan
-function tubeClick (e) {
-    if (hasSelected == true) {
-        return;
-    }
-
-    hasSelected = true;
-    const listItem = e.currentTarget.parentElement;
-    const fallingImage = listItem.querySelector('img');
-    tubesList.classList.add('locked');
-    listItem.classList.add('selected');
-    bag.classList.add('fixed');
-    fallingImage.classList.add('fall');
-}
-
-tubes.forEach(tube => {
-    tube.addEventListener('click', tubeClick);
-})
-
-
-
-
-
-
-
-
-
-
-// function achtergrond oranje m&ms maken
-// https://www.youtube.com/watch?v=E6J2fosujWQ
-const logoButton = document.querySelector('body header img');
-
-function play(){
-    const audio = document.createElement("audio");
-    audio.src = "assets/bankzitters-fart.mp3";
-    audio.play();
-}
-
-logoButton.addEventListener('dblclick', () => {
-document.body.style.backgroundImage = "url('images/MMs-buis-oranje.svg')";
-
-play();
-});
-
-
-
-
-
-
-
-
-
 
 
 const redOpenButton = document.querySelector("main ol li:first-of-type button.buis");
+const redCloseButton = document.querySelector("main ol li:nth-of-type(1) dialog > button");
 const redDialog = document.querySelector("main ol li:nth-of-type(1) dialog");
 
 const yellowOpenButton = document.querySelector("main ol li:nth-of-type(2) button.buis");
@@ -91,42 +38,102 @@ const purpleOpenButton = document.querySelector("main ol li:nth-of-type(7) butto
 const purpleCloseButton = document.querySelector("main ol li:nth-of-type(7) dialog > button");
 const purpleDialog = document.querySelector("main ol li:nth-of-type(7) dialog");
 
+// function zakje op zelfde plek laten staan
+function tubeClick (e) {
+    if (hasSelected == true) {
+        return;
+    }
+
+    hasSelected = true;
+    const listItem = e.currentTarget.parentElement;
+    const fallingImage = listItem.querySelector('img');
+    tubesList.classList.add('locked');
+    listItem.classList.add('selected');
+    bag.classList.add('fixed');
+    fallingImage.classList.add('fall');
+}
+
+tubes.forEach(tube => {
+    tube.addEventListener('click', tubeClick);
+})
+
+
+// function achtergrond oranje m&ms maken
+// https://www.youtube.com/watch?v=E6J2fosujWQ
+const logoButton = document.querySelector('body header img');
+
+function play(){
+    const audio = document.createElement("audio");
+    audio.src = "assets/bankzitters-fart.mp3";
+    audio.play();
+}
+
+logoButton.addEventListener('dblclick', () => {
+document.body.style.backgroundImage = "url('images/MMs-buis-oranje.svg')";
+
+play();
+});
+
+
+
 // https://www.aspsnippets.com/Articles/Open-jQuery-UI-Dialog-Modal-Popup-after-some-delay.aspx
 // setTimeout (function openRedDialog()  {
 //     redDialog.showModal();
 // }, 3100);
 
-function openRedDialog()  {
-    redDialog.showModal();
+// function openRedDialog()  {
+//     redDialog.showModal();
+// }
+
+function openRedDialog() {
+    setTimeout(() => {
+    redDialog.showModal()
+    }, 3000);
 }
 
-function openYellowDialog()  {
-    yellowDialog.showModal();
+function openYellowDialog() {
+    setTimeout(() => {
+    yellowDialog.showModal()
+    }, 3000);
 }
 
-function openOrangeDialog()  {
-    orangeDialog.showModal();
-}
-
-function openBlueDialog()  {
-    blueDialog.showModal();
-}
-
-function openGreenDialog()  {
-    greenDialog.showModal();
-}
-
-function openBrownDialog()  {
-    brownDialog.showModal();
-}
-
-function openPurpleDialog()  {
-    purpleDialog.showModal();
+function openOrangeDialog() {
+    setTimeout(() => {
+    orangeDialog.showModal()
+    }, 3000);
 }
 
 
+function openBlueDialog() {
+    setTimeout(() => {
+    blueDialog.showModal()
+    }, 3000);
+}
+
+function openGreenDialog() {
+    setTimeout(() => {
+    greenDialog.showModal()
+    }, 3000);
+}
+
+function openBrownDialog() {
+    setTimeout(() => {
+    brownDialog.showModal()
+    }, 3000);
+}
+
+function openPurpleDialog() {
+    setTimeout(() => {
+    prupleDialog.showModal()
+    }, 3000);
+}
 
 
+
+function closeRedDialog() {
+    redDialog.close();
+    window.location.reload()
+}
 
 function closeYellowDialog() {
     yellowDialog.close();
@@ -158,7 +165,10 @@ function closePurpleDialog() {
     window.location.reload()
 }
 
+
+
 redOpenButton.addEventListener("click", openRedDialog);
+redCloseButton.addEventListener("click", closeRedDialog);
 
 yellowOpenButton.addEventListener("click", openYellowDialog);
 yellowCloseButton.addEventListener("click", closeYellowDialog);
