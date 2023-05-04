@@ -11,7 +11,7 @@ let hasSelected = false;
 
 
 const redOpenButton = document.querySelector("main ol li:first-of-type button.buis");
-const redCloseButton = document.querySelector("main ol li:nth-of-type(1) dialog > button");
+// const redCloseButton = document.querySelector("main ol li:nth-of-type(1) dialog > button");
 const redDialog = document.querySelector("main ol li:nth-of-type(1) dialog");
 
 const yellowOpenButton = document.querySelector("main ol li:nth-of-type(2) button.buis");
@@ -130,10 +130,10 @@ function openPurpleDialog() {
 
 
 
-function closeRedDialog() {
-    redDialog.close();
-    window.location.reload()
-}
+// function closeRedDialog() {
+//     redDialog.close();
+//     window.location.reload()
+// }
 
 function closeYellowDialog() {
     yellowDialog.close();
@@ -168,7 +168,7 @@ function closePurpleDialog() {
 
 
 redOpenButton.addEventListener("click", openRedDialog);
-redCloseButton.addEventListener("click", closeRedDialog);
+// redCloseButton.addEventListener("click", closeRedDialog);
 
 yellowOpenButton.addEventListener("click", openYellowDialog);
 yellowCloseButton.addEventListener("click", closeYellowDialog);
