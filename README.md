@@ -1,13 +1,4 @@
 # Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
 
 ## Jij
 
@@ -52,6 +43,7 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
   Ik heb zelf de M&M’s gemaakt in illustrator en die afbeeldingen gebruikt. Ook heb ik later zelf het zakje gemaakt.
+  <img src="readme-images/zelfgemaakte-mms.svg" width="175px" alt="m en ms">
 
 
 
@@ -60,6 +52,7 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
  Ik heb er een background-img van gemaakt in CSS i.p.v. een gewone img tag in html. Hierdoor zat het plaatje wel in de buizen.
+ <img src="readme-images/background-images.png" width="375px" alt="background images">
 
 
 ### Bevinding 3:
@@ -67,18 +60,21 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
   De oplossing hiervoor was om de hoogte weer recht te zetten. De hoogte van de label is in een variabele gespot waardoor je ermee kan rekenen. Van hoogte van de buis is dezelfde variabele gebruikt om dit er af te halen waardoor het weer klopte.
+  <img src="readme-images/label-height.png" width="375px" alt="label">
 
 ### Bevinding 4:
   Het zakje onderin vond ik erg leuk. Ik wilde er nog iets mee doen om het leuker te maken, maar ik wist niet echt wat. Je hebt namelijk niet van elke M&M kleur ook een afbeelding van hetzelfde zakje met de juiste kleur. Ik ben ook niet goed in photoshop. Het leek mij ook niet heel belangrijk dus heb ik er geen aandacht aan besteed.
 
   #### oplossing:
   Sanne heeft mij kennis laten maken met een filter: hiermee kun je de kleuren aanpassen d.m.v. hsl. Dus heb ik dat gedaan en nu is het een stuk leuker! 
+  <img src="readme-images/filter.png" width="375px" alt="filter">
 
 ### Bevinding 5:
   Ik wilde graag een passende hover state toevoegen aan de buizen. Dit wilde ik doen met een linear-gradient. Mijn idee was om een glans effect toe te voegen om duidelijk te maken dat het glazen buizen zijn. Het probleem was dat de glans overvloeide buiten de buizen en er ook een leeg gedeelte zat binnen de buis.
 
   #### oplossing:
   De oplossing was om gebruik te maken van een conic-gradient. Op die manier had ik geen last van de lelijke overvloeiende lijnen. 
+  <img src="readme-images/conic-gradient.png" width="375px" alt="gradient">
 
 </details>
 
@@ -95,6 +91,7 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
   Ik heb de lieftallige Laurens ingeschakeld en gevraagd hoe ik dit het beste kan doen. Hij gaf als tip om een div te plaatsen die dezelfde kleur heeft als de achtergrond en deze boven de afbeelding te plaatsen van de vallende M&M’s. Dus heb ik zijn advies opgevolgd en gedaan.
+  <img src="readme-images/div.png" width="375px" alt="div">
 
 
 
@@ -103,6 +100,7 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
   Ik heb er geluid bij toegevoegd die ik zelf best grappig vind. Het is een geluidje dat vaak wordt gebruikt als er iets ‘doms’ of ‘flauws’ gebeurt. Dus vond ik het bijpassend en het maakt het toch wat leuker.
+  <img src="readme-images/geluid.png" width="375px" alt="geluid">
 
 
 
@@ -110,12 +108,13 @@ Mijn startniveau is: Blauw
   Ik vond het wel een goed idee om darkmode toe te voegen aangezien het weinig werk is, en toch veel verschil maakt. Dit was gelukt. Echter werkte mijn zwarte en witte cursor niet. 
   #### oplossing:
   Ik heb hierbij op hulp gevraagd. In plaats van de cursor in de body te zetten heb ik er een variabele van gemaakt. Nu veranderd de cursor wel mee als het van light naar darkmode gaat.
+  <img src="readme-images/cursor.png" width="375px" alt="cursor vairabele">
 
 
   ### Bevinding 4: 
   In mijn ontwerp was het de bedoeling dat het zakje stopt als je een buis aanklikt. Ik ben (onder) gemiddeld in code schrijven, dus heb ik hulp ingeschakeld van de beste programmeur die ik ken, Laurens 😎. Hij heeft mij geholpen met het maken van mijn javascript functie. 
   #### oplossing:
-
+  <img src="readme-images/buis-functie.png" width="375px" alt="buis functie Js">
 
 
    ### Bevinding 5:
@@ -123,6 +122,8 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
   Ik heb de achtergrond kleur aangepast naar een lichter geel. Hierdoor zijn de gele m&ms een stuk beter zichtbaar geworden.
+  <img src="readme-images/achtergrond-1.png" width="375px" alt="achtergrond 1">
+  <img src="readme-images/achtergrond-2.png" width="375px" alt="achtergrond 2">
 
 </details>
 
@@ -139,6 +140,7 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
   Ik heb even goed nagedacht wat ik zou kunnen doen om het wel goed in beeld te brengen. En toen bedacht ik mij dat de beste manier is om de reclames te bekijken, daar zijn de immers bekend van en hebben daarin hun karakter ontwikkeld. Dus heb ik veel reclames gekeken en die uitgekozen die naar mijn mening het karakter van elke M&M goed laat zien. 
+  <img src="readme-images/video.png" width="375px" alt="achtergrond 2">
 
 
   ### Bevinding 2:
@@ -146,27 +148,31 @@ Mijn startniveau is: Blauw
 
   #### oplossing:
   Ik heb van alles geprobeerd, maar het enige dat werkte was een class toevoegen aan de buttons van de buizen. Zelfs nth-of-type(): werkte niet. Zo kon ik de stijling apart houden van elkaar.
-
+  <img src="readme-images/class.png" width="375px" alt="achtergrond 2">
 
   ### Bevinding 3:
   Bij mijn ontwerp is het de bedoeling dat er eerst een animatie afspeelt en dan de dialogue opent. 
   #### oplossing:
   Na wat googelen heb ben ik erachter gekomen dat dit kan met een settimeout. 
-
+  <img src="readme-images/settimeout.png" width="475px" alt="settimeout">
 
   ### Bevinding 4:
   Ik had wat problemen met de dialogue. Eerst wilde niks behalve de eerste dicht. Toen had ik een functie gemaakt waarbij alles wel dicht ging behalve de eerste. Dus had ik hulp ingeschakeld. 
 
   #### oplossing:
-  Het probleem dat hem in dit: 
+  Het probleem zat hem in dit: 
 
   const redCloseButton = document.querySelector("main ol li:nth-of-type(1) dialog > button");
  
   De button zit niet direct in de dialog. Daar zit het form nog tussen. Ook had ik het probleem dat als je de dialogiue afsluit je de video op de achtergrond nog hoorde afspelen. Dus heb ik toegevoegd dat de pagina opnieuw laadt waardoor je de video nier meer kan horen als je de dialogue afsluit.
-
+  <img src="readme-images/reload.png" width="375px" alt="reload">
+  <img src="readme-images/const.png" width="675px" alt="const">
 
   ### Bevinding 5:
   Als laatst hebben wij natuurlijk feedback moeten geven. Dit heb ik gedaan met Annika. Zij gaf aan dat de darkmode niet werkte. Ik was aan het experimenteren met iets maar daardoor was het kapot gegaan en had ik het niet door voor de deadline dus heb ik dat nog kunnen oplossen. Ook gaf zij aan dat zij de achtergrond kleur een beetje oud bollig vindt. Ik heb zitten twijfelen om weer terug te gaan daar de eerste gele kleur die ik had. Dit heb ik uiteindelijk niet gedaan omdat ik het contrast toch ook wel belangrijk vindt. Wel heb ik het iets minder licht geel gemaakt. Het contrast is niet perfect maar zo heb ik een middenweg kunnen vinden tussen de huisstijl en contrast.
+  <img src="readme-images/achtergrond-1.png" width="375px" alt="achtergrond 1">
+  <img src="readme-images/achtergrond-2.png" width="375px" alt="achtergrond 2">
+  <img src="readme-images/achtergrond-2.png" width="375px" alt="achtergrond 3">
 
 
 </details>
@@ -180,19 +186,17 @@ Mijn startniveau is: Blauw
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/achtergrond-3.png" width="375px" alt="final ontwerp">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Ik heb best veel nieuwe dingen gedaan en ook dingen opgefrist. Denk aan de conic-gradient en background-image. Dit heb ik ooit eerder gedaan, maar het was wel weer verwaterd. Ook heb ik voor het eerst ::before gebruikt. De ~ . De filter van het zakje heb ik voor het eerst gedaan. Flex-grow en dialogues waren ook helemaal nieuw voor mij. Dus ik ben erg blij dat ik mijn kennis weer heb kunnen verbreden. Nu weet ik als designer beter wat mogelijk is voor de programmeurs en kan ik daar rekening mee houden als ik interfaces ontwerp.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
 
   ### Dit was lastig/Is niet gelukt:
   Het lastigst vond ik natuurlijk javascript. Dat is ook het gene waar in hulp heb ingeschakeld. Dat komt doordat ik er niet heel goed in ben. Ik snap wat er moet gebeuren, maar ik heb de kennis niet om dat dan ook daardwerkelijk te maken.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/buis-functie.png" width="375px" alt="bummer">
 </details>
 
 
