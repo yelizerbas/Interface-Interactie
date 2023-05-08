@@ -172,7 +172,7 @@ Mijn startniveau is: Blauw
   Als laatst hebben wij natuurlijk feedback moeten geven. Dit heb ik gedaan met Annika. Zij gaf aan dat de darkmode niet werkte. Ik was aan het experimenteren met iets maar daardoor was het kapot gegaan en had ik het niet door voor de deadline dus heb ik dat nog kunnen oplossen. Ook gaf zij aan dat zij de achtergrond kleur een beetje oud bollig vindt. Ik heb zitten twijfelen om weer terug te gaan daar de eerste gele kleur die ik had. Dit heb ik uiteindelijk niet gedaan omdat ik het contrast toch ook wel belangrijk vindt. Wel heb ik het iets minder licht geel gemaakt. Het contrast is niet perfect maar zo heb ik een middenweg kunnen vinden tussen de huisstijl en contrast.
   <img src="readme-images/achtergrond-1.png" width="375px" alt="achtergrond 1">
   <img src="readme-images/achtergrond-2.png" width="375px" alt="achtergrond 2">
-  <img src="readme-images/achtergrond-2.png" width="375px" alt="achtergrond 3">
+  <img src="readme-images/achtergrond-3.png" width="375px" alt="achtergrond 3">
 
 
 </details>
