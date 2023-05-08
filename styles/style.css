@@ -61,33 +61,13 @@ button:not([disabled]) {
 
 /*********************/
 /***** DARK MODE *****/
-/*********************/
-
-:root.darkmode {
-  --color-yellow: #1f1f1f;
-  --color-white: #ffffff;
-  --color-white-text: #1f1f1f;
-  --color-grey:rgba(233, 233, 233, 0.664);
-  --color-shadow-grey: rgb(77, 77, 77);
-  --color-orange: rgb(255, 166, 0);
-  --color-brown: #ffd200;
-  --color-shine: rgba(255, 255, 255, 0.836);
-  --color-transparent: transparent;
-  --cursor: url(../images/MMs-cursor-wit.png), pointer;
-  
-}  
-
+/*********************/ 
 @media (prefers-color-scheme: dark) {
   *, *::after, *::before {
     outline-color: var(--color-pink);
   }
 
-  /* body {
-    cursor: url(../images/MMs-cursor-wit.png), pointer;
-    cursor: var(--cursor);
-  } */
-  
-  /* :root {
+  :root {
     --color-yellow: #1f1f1f;
     --color-white: #ffffff;
     --color-white-text: #1f1f1f;
@@ -99,7 +79,7 @@ button:not([disabled]) {
     --color-transparent: transparent;
     --cursor: url(../images/MMs-cursor-wit.png), pointer;
     
-  }   */
+  }  
 
 }
 
@@ -109,7 +89,6 @@ button:not([disabled]) {
 /********************/
 body {
   background-color: var(--color-yellow);
-  /* cursor: url(../images/MMs-cursor-zwart.png), pointer; */
   cursor: var(--cursor);
 }
 
@@ -162,27 +141,30 @@ main ol {
   margin: 0 auto;
 }
 
+/* even groot maken */
 main ol li {
   flex-grow: 1;
   padding: 0 1em;
 }
 
+/* tabel met jaartal */
 main ol li p {
   color: var(--color-white-text);
   background-color: var(--color-brown);
   padding: 1em;
   height: var(--year-label-height);
   text-align: center;
-  /* -webkit-text-stroke: .5px var(--color-white); */
   font-weight: bold;
   font-family: aachen, arial;
   box-shadow: .1em .1em .5em var(--color-shadow-grey);
 }
 
+/* buis maken en afbeelding zich zelf laten herhalen voor volle buis */
 main ol li button.buis{
   background-repeat: repeat-y;
   background-size: 100% auto;
   position: relative;
+  /* anders klopt de hoogte niet voor het zakje*/
   height: calc(100% - var(--year-label-height));
   width: 100%;
   background-color: var(--color-grey);
@@ -198,22 +180,6 @@ main ol li button.buis{
 
 
 
-
-
-/********************/
-/****** SCHADUW *****/
-/********************/
-/* main ol li button::after {
-  content: '';
-  position: absolute;
-  bottom: -3em;
-  width: 80%;
-  height: 1.6em;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-} */
 
 
 
@@ -258,6 +224,7 @@ main ol li:nth-of-type(7){
 /********************/
 /****IMAGE M&MS *****/
 /********************/
+/* afbeelding in buis */
 main ol li:first-of-type button.buis {
   cursor: inherit;
   background-image: url(../images/MMs-buis-rood.svg);
@@ -302,6 +269,7 @@ main ol li:nth-of-type(7) button.buis {
 /********************/
 /******* ZAKJE ******/
 /********************/
+/* zak staat in het midden */
 main ol li:last-of-type {
   position: absolute;
   bottom: -15rem;
@@ -318,7 +286,8 @@ main ol li:last-of-type img{
 
 
 /* verplaatsen en kleur aanpassen */
-
+/* eerste li wordt tegelijk geselecteerd met de laatste li door ~ */
+/* het gebeurd als je er op klikt, maar ook als je er over heen hovert */
 main ol li:nth-of-type(1).selected ~ li:last-of-type,
 main ol:not(.locked) li:nth-of-type(1):hover ~ li:last-of-type {
   left: 0;
@@ -327,7 +296,6 @@ main ol:not(.locked) li:nth-of-type(1):hover ~ li:last-of-type {
 
 main ol li:nth-of-type(2).selected ~ li:last-of-type,
 main ol:not(.locked) li:nth-of-type(2):hover ~ li:last-of-type {
-  /* left: calc(0% + var(--slide-precentage)); */
   left: calc(100% / var(--buisjes));
   filter: hue-rotate(-150deg) saturate(3) brightness(1.3);
 }
@@ -337,10 +305,6 @@ main ol:not(.locked) li:nth-of-type(3):hover ~ li:last-of-type {
   left: calc(100% / var(--buisjes) * 2);
   filter: hue-rotate(-170deg) saturate(1.3) brightness(1.3);
 }
-
-/* main ol li:nth-of-type(4).selected ~ li:last-of-type,
-main ol li:nth-of-type(4):hover ~ li:last-of-type {
-} */
 
 main ol li:nth-of-type(5).selected ~ li:last-of-type,
 main ol:not(.locked) li:nth-of-type(5):hover ~ li:last-of-type {
@@ -394,43 +358,16 @@ main ol li div{
   }
 }
 
+/* animatie vallende mms afspelen als classes zijn toegevoegd JS */
 main ol li.selected img.fall{
   animation: vallen 2s;
 }
 
 
-/* main ol li:not(:last-of-type):first-of-type.selected img.fall{
-  animation: vallen 2s;
-}
-
-main ol li:not(:last-of-type):nth-of-type(2).selected img.fall{
-  animation: vallen 2s;
-}
-
-main ol li:not(:last-of-type):nth-of-type(3) img.fall{
-  animation: vallen 2s;
-}
-
-main ol li:not(:last-of-type):nth-of-type(4) img.fall{
-  animation: vallen 2s;
-}
-  
-main ol li:not(:last-of-type):nth-of-type(5) img.fall{
-  animation: vallen 2s;
-}
-  
-main ol li:not(:last-of-type):nth-of-type(6) img.fall{
-  animation: vallen 2s;
-}
-
-main ol li:not(:last-of-type):nth-of-type(7) img.fall{
-  animation: vallen 2s;
-} */
-
-
 /********************/
 /******* GLANS ******/
 /********************/
+/* glas gemaakt met conic gradient en ingezoomd */
 main ol li button.buis:hover::before{
   animation: glans 4s infinite linear;
   content:"";
@@ -447,6 +384,7 @@ main ol li button.buis:hover::before{
 
 }
 
+/* animatie glans bij hover */
 @keyframes glans {
   0%, 15%{
     transform: translatey(-100%);
@@ -459,9 +397,7 @@ main ol li button.buis:hover::before{
 /********************/
 /***** DIALOGS ******/
 /********************/
-
 main ol li dialog{
-  
   width: 100%;
   height: 100%;
   background-color: var(--color-transparent);
@@ -470,12 +406,14 @@ main ol li dialog{
   padding:0;
   
 }
+
+
 dialog::backdrop {
   backdrop-filter:blur(3em) brightness(1.2);
 }
 
 main ol li dialog button{
-  position:absolute;
+  position: absolute;
 	right: 1em;
 	top: 2em;
   z-index: 10;

@@ -1,9 +1,10 @@
-// JavaScript Document
 console.log('Howdy!');
 
-
-
-// alle variabelen
+///////////////////////////////////
+///////////////////////////////////
+//////////alle constanten//////////
+///////////////////////////////////
+///////////////////////////////////
 const tubesList = document.querySelector('main ol');
 const tubes = document.querySelectorAll('main ol li:not(:last-of-type) button.buis');
 const bag = document.querySelector('main ol li:last-of-type');
@@ -31,8 +32,25 @@ const brownDialog = document.querySelector("main ol li:nth-of-type(6) dialog");
 const purpleCloseButton = document.querySelector("main ol li:nth-of-type(7) dialog button");
 const purpleDialog = document.querySelector("main ol li:nth-of-type(7) dialog");
 
-// function zakje op zelfde plek laten staan
+
+
+const logoButton = document.querySelector('body header img');
+
+
+
+
+
+
+
+
+
+///////////////////////////////////
+///////////////////////////////////
+//////functie zak laten staan//////
+///////////////////////////////////
+///////////////////////////////////
 function tubeClick (e) {
+    // als bruis als is geklikt dan stopt de functie
     if (hasSelected == true) {
         return;
     }
@@ -42,7 +60,7 @@ function tubeClick (e) {
     const fallingImage = listItem.querySelector('img');
     const dialog = listItem.querySelector('dialog');
 
-    // lock de buizen om dubbel klikken te voorkomen en co
+    // lock de buizen om dubbel klikken te voorkomen
     tubesList.classList.add('locked');
     listItem.classList.add('selected');
     bag.classList.add('fixed');
@@ -64,15 +82,27 @@ function tubeClick (e) {
 
 }
 
+// alle tubes krijgen de functie, maar het werkt alleen op de gene die je klikt
 tubes.forEach(tube => {
     tube.addEventListener('click', tubeClick);
 })
 
 
-// function achtergrond oranje m&ms maken
-// https://www.youtube.com/watch?v=E6J2fosujWQ
-const logoButton = document.querySelector('body header img');
 
+
+
+
+
+
+
+
+
+///////////////////////////////////
+///////////////////////////////////
+////functie oranje achtergrond/////
+///////////////////////////////////
+///////////////////////////////////
+// https://www.youtube.com/watch?v=E6J2fosujWQ
 function play(){
     const audio = document.createElement("audio");
     audio.src = "assets/bankzitters-fart.mp3";
@@ -86,38 +116,55 @@ logoButton.addEventListener('dblclick', () => {
 
 
 
-// https://www.aspsnippets.com/Articles/Open-jQuery-UI-Dialog-Modal-Popup-after-some-delay.aspx
 
 
+
+
+
+
+
+///////////////////////////////////
+///////////////////////////////////
+///////functie sluiten dialog//////
+///////////////////////////////////
+///////////////////////////////////
+// Herladen pagina anders hoor je de video nog op de achtergrond afspelen
 function closeRedDialog() {
     redDialog.close();
+    window.location.reload()
 }
 
 function closeYellowDialog() {
     yellowDialog.close();
+    window.location.reload()
 }
 
 function closeOrangeDialog() {
     orangeDialog.close();
+    window.location.reload()
 }
 
 function closeBlueDialog() {
     blueDialog.close();
+    window.location.reload()
 }
 
 function closeGreenDialog() {
     greenDialog.close();
+    window.location.reload()
 }
 
 function closeBrownDialog() {
     brownDialog.close();
+    window.location.reload()
 }
 
 function closePurpleDialog() {
     purpleDialog.close();
+    window.location.reload()
 }
 
-
+// alle eventlisteners sluiten dialog
 redCloseButton.addEventListener("click", closeRedDialog);
 
 yellowCloseButton.addEventListener("click", closeYellowDialog);

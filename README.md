@@ -15,7 +15,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Yeliz Erbas
 
 #### Je startniveau:
-Mijn startniveau is: Blauw/Rood
+Mijn startniveau is: Blauw
 
 
 
@@ -31,10 +31,11 @@ Mijn startniveau is: Blauw/Rood
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - Leren om vormpjes te maken met gradients
-  - Leren om animaties goed samen te laten werken
-  - Leren om animaties te bedenken die goed passen bij het onderwerp
  
+  - Mijn gebeugen weer opfrissen, want ik ben best veel vergeten
+  - Leren animaties en functies samen laten werken met JavaScript en Css
+  - Leren om animaties te bedenken die goed passen bij het onderwerp
+  - Nieuwe dingen doen die ik nog niet eerder heb gedaan 
 </details>
 
 
@@ -156,10 +157,15 @@ Mijn startniveau is: Blauw/Rood
 <details open>
 <summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
+1. Laurens <3
+2. https://www.youtube.com/watch?v=E6J2fosujWQ
+3. https://www.aspsnippets.com/Articles/Open-jQuery-UI-Dialog-Modal-Popup-after-some-delay.aspx
+4. https://codepen.io/yelizerbas/pen/OJBpWJq
+5. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+6. https://codepen.io/shooft/pen/PoyWMWb
+7. https://www.w3schools.com/cssref/pr_background-image.php
+8. https://www.northamericansigns.com/pre-attentive-processing-in-sign-design/hsl-color-wheel/
 
-1. bron 1
-2. bron 2
-3. ...
+
 
 </details>
